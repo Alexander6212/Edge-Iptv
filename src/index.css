@@ -1,0 +1,57 @@
+@font-face {
+  font-family: 'Anton';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://static.figma.com/font/Anton-Regular_2') format('woff2');
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://static.figma.com/font/DMSans_opsz_wght__1') format('woff2');
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('https://static.figma.com/font/DMSans_opsz_wght__1') format('woff2');
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('https://static.figma.com/font/DMSans_opsz_wght__1') format('woff2');
+}
+
+@import 'tailwindcss';
+
+@theme {
+  --font-display: 'Anton', sans-serif;
+  --font-sans: 'DM Sans', sans-serif;
+
+  --color-edge-yellow: #FACC15;
+  --color-edge-yellow-dark: #EAB308;
+  --color-edge-black: #080808;
+  --color-edge-dark: #111111;
+  --color-edge-card: #161616;
+  --color-edge-border: #2a2a2a;
+}
+
+* {
+  scrollbar-width: none;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  background-color: #080808;
+  color: #f5f5f5;
+}
