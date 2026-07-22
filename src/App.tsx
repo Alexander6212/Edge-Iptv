@@ -140,6 +140,9 @@ const STATS = [
 ]
 
 export default function App() {
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  
   const [activeSection, setActiveSection] = useState('')
   const [openFaq, setOpenFaq] = useState<number | null>(null)
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -147,6 +150,35 @@ export default function App() {
   const [activePlanPeriod, setActivePlanPeriod] = useState<'monthly' | 'yearly'>('monthly')
   const [user, setUser] = useState<any>(null)
   const [loading, setLoading] = useState(true)
+  const handleSignUp = async () => {
+  const { error } = await supabase.auth.signUp({
+    email,
+    password,
+  })
+
+  if (error) {
+    alert(error.message)
+  } else {
+    alert('Account created! Check your email to confirm your account.')
+  }
+}
+
+const handleLogin = async () => {
+  const { error } = await supabase.auth.signInWithPassword({
+    email,
+    password,
+  })
+
+  if (error) {
+    alert(error.message)
+  } else {
+    alert('Login successful!')
+  }
+}
+
+const handleLogout = async () => {
+  await supabase.auth.signOut()
+}
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data }) => {
