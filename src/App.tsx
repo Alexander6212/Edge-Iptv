@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-
+import { supabase } from './supabaseClient'
 const NAV_LINKS = ['Features', 'Channels', 'Pricing', 'Devices', 'FAQ']
 
 const FEATURES = [
