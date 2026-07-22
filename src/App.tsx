@@ -960,7 +960,7 @@ export default function App() {
         </div>
       </footer>
     
-      <a href="https://wa.me/923394500119?text=Hi!%20I%20want%20to%20buy%20an%20IPTV%20subscription." target="_blank" rel="noreferrer" style={{position:'fixed',right:'20px',bottom:'20px',width:'60px',height:'60px',borderRadius:'50%',background:'#25D366',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'30px',color:'#fff',textDecoration:'none',zIndex:9999}}>💬</a>
+      <a href="https://wa.me/923394500119?text=Hi!%20I%20want%20to%20buy%20an%20IPTV%20subscription." target="_blank" rel="noreferrer" style={{position:'fixed',right:'20px',bottom:'100px',width:'60px',height:'60px',borderRadius:'50%',background:'#25D366',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'30px',color:'#fff',textDecoration:'none',zIndex:9999}}>💬</a>
 </div>
   )
 }
