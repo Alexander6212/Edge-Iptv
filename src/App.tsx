@@ -152,6 +152,16 @@ export default function App() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
+  useEffect(() => {
+    const s=document.createElement('script');
+    s.src='https://embed.tawk.to/6a60a4c7ff3acf1d4aacca98/1ju4o7bo9';
+    s.async=true;
+    s.charset='UTF-8';
+    s.setAttribute('crossorigin','*');
+    document.body.appendChild(s);
+    return ()=>{document.body.removeChild(s)};
+  }, [])
+
   const yearlyDiscount = 0.7
 
   return (
@@ -949,6 +959,8 @@ export default function App() {
           </div>
         </div>
       </footer>
-    </div>
+    
+      <a href="https://wa.me/923394500119?text=Hi!%20I%20want%20to%20buy%20an%20IPTV%20subscription." target="_blank" rel="noreferrer" style={{position:'fixed',right:'20px',bottom:'20px',width:'60px',height:'60px',borderRadius:'50%',background:'#25D366',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'30px',color:'#fff',textDecoration:'none',zIndex:9999}}>💬</a>
+</div>
   )
 }
