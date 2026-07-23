@@ -141,6 +141,8 @@ const STATS = [
 
 export default function App() {
   const [email, setEmail] = useState('')
+  const [showAuth, setShowAuth] = useState(false)
+  const [authMode, setAuthMode] = useState<'login' | 'signup'>('signup')
   const [password, setPassword] = useState('')
   
   const [activeSection, setActiveSection] = useState('')
