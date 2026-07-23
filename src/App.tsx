@@ -152,7 +152,6 @@ export default function App() {
   const [activePlanPeriod, setActivePlanPeriod] = useState<'monthly' | 'yearly'>('monthly')
   const [user, setUser] = useState<any>(null)
   const [loading, setLoading] = useState(true)
-  const [showAuth, setShowAuth] = useState(false)
   const handleSignUp = async () => {
   const { error } = await supabase.auth.signUp({
     email,
