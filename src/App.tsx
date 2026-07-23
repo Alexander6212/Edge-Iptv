@@ -150,6 +150,7 @@ export default function App() {
   const [activePlanPeriod, setActivePlanPeriod] = useState<'monthly' | 'yearly'>('monthly')
   const [user, setUser] = useState<any>(null)
   const [loading, setLoading] = useState(true)
+  const [showAuth, setShowAuth] = useState(false)
   const handleSignUp = async () => {
   const { error } = await supabase.auth.signUp({
     email,
@@ -260,10 +261,10 @@ const handleLogout = async () => {
           </div>
 
           <div className="hidden md:flex items-center gap-3">
-            <a
-              href="#trial"
+            <button
               className="text-sm font-semibold px-4 py-2 rounded transition-colors"
               style={{ color: '#FACC15', border: '1px solid #FACC15' }}
+              onClick={() => setShowAuth(true)}
               onMouseEnter={(e) => {
                 e.currentTarget.style.background = '#FACC15'
                 e.currentTarget.style.color = '#000'
@@ -274,7 +275,7 @@ const handleLogout = async () => {
               }}
             >
               Free Trial
-            </a>
+            </button>
             <a
               href="#pricing"
               className="text-sm font-bold px-5 py-2 rounded transition-all"
